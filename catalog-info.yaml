@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-123
+  title: demo-123
+  annotations:
+    janus-idp.io/tekton: demo-123
+    tektonci/build-namespace: demo
+    github.com/project-slug: piomin/demo-123
+    sonarqube.org/project-key: piomin_demo-123
+    backstage.io/kubernetes-id: demo-123
+    argocd/app-name: demo-123
+    prometheus.io/rule: container_memory_usage_bytes{pod=~"demo-123-.*"}|pod,rate(container_cpu_usage_seconds_total{pod=~"demo-123-.*"}[5m])|pod
+  tags:
+    - spring-boot
+    - java
+    - maven
+    - tekton
+    - argocd
+    - renovate
+    - sonarqube
+spec:
+  type: service
+  owner: piomin
+  lifecycle: experimental
